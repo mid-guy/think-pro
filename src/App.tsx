@@ -1,27 +1,20 @@
-import React from "react";
-import logo from "./logo.svg";
+import { Suspense, lazy } from "react";
 import "./App.css";
-import Button from "./shared/button/Button";
+
+const Button = lazy(() => import("./shared/button/Button/Button"));
+
+const ButtonContained = lazy(
+  () => import("./shared/button/ButtonContained/ButtonContained")
+);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button size="small" variant="contained">
-          this is button
-        </Button>
+        <Suspense>
+          <Button size="small">This HOC component</Button>
+          <ButtonContained size="medium">This HOC component</ButtonContained>
+        </Suspense>
       </header>
     </div>
   );
