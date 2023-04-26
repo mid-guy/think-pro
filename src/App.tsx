@@ -1,19 +1,20 @@
 import { Suspense, lazy } from "react";
 import "./App.css";
-
-const Button = lazy(() => import("./shared/button/Button/Button"));
-
-const ButtonContained = lazy(
-  () => import("./shared/button/ButtonContained/ButtonContained")
-);
-
+const ButtonContained = lazy(() => import("./shared/button/ButtonContained"));
+const ButtonOutlined = lazy(() => import("./shared/button/ButtonOutlined"));
+const ButtonText = lazy(() => import("./shared/button/ButtonText"));
+const StackRow = lazy(() => import("./shared/stack/StackRow"));
+//
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Suspense>
-          <Button size="small">This HOC component</Button>
-          <ButtonContained size="medium">This HOC component</ButtonContained>
+          <StackRow columnGap={1}>
+            <ButtonContained size="medium">This HOC component</ButtonContained>
+            <ButtonOutlined size="medium">This HOC component</ButtonOutlined>
+            <ButtonText size="medium">This HOC component</ButtonText>
+          </StackRow>
         </Suspense>
       </header>
     </div>
