@@ -1,6 +1,4 @@
-import { Button as ButtonMaterial } from "@mui/material";
-import React from "react";
+import { Button as ButtonIcon } from "@mui/material";
+import withPrefixComponent from "../../../utils/withPrefixComponent";
 
-export default function ButtonIcon() {
-  return <ButtonMaterial />;
-}
+export default withPrefixComponent(ButtonIcon);
