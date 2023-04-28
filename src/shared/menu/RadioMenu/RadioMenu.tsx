@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import {
   FormControlLabel,
   Menu,
@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import ButtonContained from "../../button/ButtonContained/ButtonContained";
 import useToggleMenu from "../../../hooks/useToggleMenu";
+import DetailsMenu from "../../../assets/DetailsMenu";
 
 export default function RadioMenu({ label }: { label: string }) {
   const { handleClick, handleClose, open, anchorEl } = useToggleMenu();
@@ -20,6 +21,7 @@ export default function RadioMenu({ label }: { label: string }) {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        endIcon={<DetailsMenu />}
       >
         {label}
       </ButtonContained>

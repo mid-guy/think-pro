@@ -4,6 +4,7 @@ import ButtonContained from "../../button/ButtonContained/ButtonContained";
 import useToggleMenu from "../../../hooks/useToggleMenu";
 import StackRow from "../../stack/StackRow/StackRow";
 import useToggleCheckbox from "../../../hooks/useToggleCheckbox";
+import DetailsMenu from "../../../assets/DetailsMenu";
 
 export default function CheckboxMenu({
   label,
@@ -23,6 +24,7 @@ export default function CheckboxMenu({
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        endIcon={<DetailsMenu />}
       >
         {label}
       </ButtonContained>
@@ -37,7 +39,7 @@ export default function CheckboxMenu({
       >
         <Box padding={1}>
           <FormControlLabel
-            label="Parent"
+            label="Tất cả"
             control={
               <Checkbox
                 checked={checked[0] && checked[1]}
