@@ -1,8 +1,8 @@
-import MainHeader from "../../layout/header/MainHeader/MainHeader";
+import MainHeader from "../../layout/MainHeader/MainHeader";
 import TemplateProduct from "../../layout/body/TemplateProduct/TemplateProduct";
 import StackColumn from "../../shared/stack/StackColumn";
-import MainBottom from "../../layout/bottom/MainBottom/MainBottom";
-import NavbarProduct from "../../layout/body/NavbarProduct/NavbarProduct";
+import MainBottom from "../../layout/MainBottom/MainBottom";
+import NavbarProduct from "../../layout/NavbarProduct/NavbarProduct";
 
 export default function Home() {
   return (

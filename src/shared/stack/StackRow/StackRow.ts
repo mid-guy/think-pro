@@ -1,4 +1,4 @@
 import { Stack } from "@mui/material";
-import withPrefixComponent from "../../../utils/withPrefixComponent";
+import withPrefixComponent from "../../../hooks/withPrefixComponent";
 
 export default withPrefixComponent({ displayName: "StackRow" })(Stack, { direction: "row" });

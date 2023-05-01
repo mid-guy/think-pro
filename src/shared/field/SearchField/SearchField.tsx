@@ -1,5 +1,5 @@
 import { InputAdornment, TextField } from "@mui/material";
-import withPrefixComponent from "../../../utils/withPrefixComponent";
+import withPrefixComponent from "../../../hooks/withPrefixComponent";
 import Search from "../../../assets/Search";
 export default withPrefixComponent({ displayName: "SearchField" })(TextField, {
   size: "small",

@@ -1,4 +1,4 @@
 import { Button as ButtonIcon } from "@mui/material";
-import withPrefixComponent from "../../../utils/withPrefixComponent";
+import withPrefixComponent from "../../../hooks/withPrefixComponent";
 
 export default withPrefixComponent({ displayName: "ButtonIcon" })(ButtonIcon);

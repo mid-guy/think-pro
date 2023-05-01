@@ -2,10 +2,8 @@ import { Suspense, lazy } from "react";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { Outlet } from "react-router-dom";
-import NavbarProduct from "./layout/body/NavbarProduct/NavbarProduct";
-import MainHeader from "./layout/header/MainHeader/MainHeader";
-
-const Home = lazy(() => import("./container/home/Home"));
+import NavbarProduct from "./layout/NavbarProduct/NavbarProduct";
+import MainHeader from "./layout/MainHeader/MainHeader";
 //
 
 let theme = createTheme({

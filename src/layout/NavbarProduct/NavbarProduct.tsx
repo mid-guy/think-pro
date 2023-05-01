@@ -1,6 +1,6 @@
 import React from 'react'
-import StackRow from '../../../shared/stack/StackRow/StackRow'
-import Button from '../../../shared/button/Button/Button'
+import StackRow from '../../shared/stack/StackRow/StackRow'
+import Button from '../../shared/button/Button/Button'
 
 export default function NavbarProduct() {
   return (

@@ -1,4 +1,4 @@
-import StackRow from "../../../shared/stack/StackRow/StackRow";
+import StackRow from "../../shared/stack/StackRow/StackRow";
 
 export default function MainBottom() {
   return (

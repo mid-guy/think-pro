@@ -1,4 +1,4 @@
-import withPrefixComponent from "../../../utils/withPrefixComponent";
+import withPrefixComponent from "../../../hooks/withPrefixComponent";
 import Button from "../Button/Button";
 
 export default withPrefixComponent({ displayName: "ButtonContained" })(Button, {

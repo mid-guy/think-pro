@@ -1,10 +1,10 @@
-import StackRow from "../../../shared/stack/StackRow/StackRow";
-import ButtonText from "../../../shared/button/ButtonText/ButtonText";
-import LocationService from "../../../assets/LocationService";
-import PhoneService from "../../../assets/PhoneService";
-import SupportService from "../../../assets/SupportService";
-import withPrefixComponent from "../../../utils/withPrefixComponent";
-import SearchField from "../../../shared/field/SearchField";
+import StackRow from "../../shared/stack/StackRow/StackRow";
+import ButtonText from "../../shared/button/ButtonText/ButtonText";
+import LocationService from "../../assets/LocationService";
+import PhoneService from "../../assets/PhoneService";
+import SupportService from "../../assets/SupportService";
+import withPrefixComponent from "../../hooks/withPrefixComponent";
+import SearchField from "../../shared/field/SearchField";
 
 const ButtonTextSmall = withPrefixComponent({ displayName: "ButtonTextSmall" })(
   ButtonText,
