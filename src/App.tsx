@@ -1,8 +1,13 @@
 import { Suspense, lazy } from "react";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material";
+import { Outlet } from "react-router-dom";
+import NavbarProduct from "./layout/body/NavbarProduct/NavbarProduct";
+import MainHeader from "./layout/header/MainHeader/MainHeader";
+
 const Home = lazy(() => import("./container/home/Home"));
 //
+
 let theme = createTheme({
   // palette: {
   //   primary: {
@@ -35,7 +40,9 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Suspense>
-            <Home />
+            <MainHeader />
+            <NavbarProduct />
+            <Outlet />
           </Suspense>
         </header>
       </div>
