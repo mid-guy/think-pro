@@ -1,90 +1,44 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-export const specsCoreLaptopSchema = new mongoose.Schema({
-  core: {
-    type: String,
-    require: true,
-  },
-  thread: {
-    type: Number,
-    require: true,
-  },
-  clock: {
-    type: Number,
-    require: true,
-  },
-  cache: {
-    type: Number,
-    require: true,
-  },
-});
-
-export const specsMemoryLaptopSchema = new mongoose.Schema({
-  storage: {
-    type: String,
-    require: true,
-  },
-  clock: {
-    type: Number,
-    require: true,
-  },
-  cache: {
-    type: Number,
-    require: true,
-  },
-  enhanceAble: {
-    type: Boolean,
-    require: false,
-  },
-});
-
-export const specsMonitorLaptopSchema = new mongoose.Schema({
-  size: {
-    type: Number,
-    require: true,
-  },
-  ratio: {
-    type: String,
-    require: true,
-  },
-  panel: {
-    type: String,
-    require: true,
-  },
-  clock: {
-    type: Number,
-    require: true,
-  },
-  colors: {
-    type: String,
-    require: true,
-  },
-});
-
-export const hardDriveSchema = new mongoose.Schema({
-  storage: {
-    type: Number,
-    require: true,
-  },
+export const specsConnectionKeyboardSchema = new mongoose.Schema({
   type: {
     type: String,
     require: true,
   },
-});
-
-export const GraphicSchema = new mongoose.Schema({
-  onBoard: {
-    type: String | Boolean,
+  driver: {
+    type: [String],
     require: true,
   },
-  gpu: {
-    type: String | Boolean,
+  maxNumberDevice: {
+    type: Number,
     require: true,
   },
 });
 
-export const SizeSchema = new mongoose.Schema({
+export const LayoutKeyboardSchema = new mongoose.Schema({
+  switch: {
+    type: [String],
+    required: true,
+  },
+  layout: {
+    type: [Number],
+    require: true,
+  },
+  button: {
+    type: [Number],
+    require: true,
+  },
+});
+
+export const OSKeyboardSchema = new mongoose.Schema({
+  os: {
+    type: [String],
+    require: true,
+  },
+});
+
+export const SizeKeyboardSchema = new mongoose.Schema({
   light: {
     type: Number,
     require: true,
@@ -104,23 +58,21 @@ export const MassAndSizeSchema = new mongoose.Schema({
     type: Number,
     require: true,
   },
-  size: SizeSchema,
+  size: SizeKeyboardSchema,
   material: {
     type: String,
     require: true,
   },
 });
 
-export const specsLaptopSchema = new mongoose.Schema({
-  cpu: specsCoreLaptopSchema,
-  memory: specsMemoryLaptopSchema,
-  monitor: specsMonitorLaptopSchema,
-  hardDrive: hardDriveSchema,
-  graphic: GraphicSchema,
+export const specsKeyboardSchema = new mongoose.Schema({
+  connection: specsConnectionKeyboardSchema,
+  os: OSKeyboardSchema,
+  layout: LayoutKeyboardSchema,
   massAndSize: MassAndSizeSchema,
 });
 
-const LaptopSchema = new Schema({
+const KeyboardSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -184,7 +136,7 @@ const LaptopSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  specs: specsLaptopSchema,
+  specs: specsKeyboardSchema,
   images: [
     {
       type: String,
@@ -193,4 +145,4 @@ const LaptopSchema = new Schema({
   ],
 });
 
-module.exports = mongoose.model("laptop", LaptopSchema);
+module.exports = mongoose.model("keyboard", KeyboardSchema);
