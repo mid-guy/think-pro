@@ -1,0 +1,5 @@
+const STATUS_PRODUCT = ["PRE_ORDER", "OUT_OF_STOCK", "IN_STOCK"];
+
+const BRAND = ["DELL", "HP", "LENOVO", "LG", "APPLE", "MSI"];
+
+export { STATUS_PRODUCT, BRAND };

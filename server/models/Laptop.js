@@ -121,14 +121,30 @@ export const specsLaptopSchema = new mongoose.Schema({
 });
 
 const LaptopSchema = new Schema({
+  _id: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   name: {
     type: String,
     required: true,
     unique: true,
   },
+  description: {
+    type: String,
+    required: true,
+  },
+  status: {
+    type: String,
+    enum: ["COMPLETED", "PROCESSING"],
+    default: "PROCESSING",
+    required: true,
+  },
   sku: {
     type: String,
     required: true,
+    unique: true,
   },
   brand: {
     type: String,
